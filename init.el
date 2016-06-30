@@ -44,6 +44,10 @@ values."
      (auto-completion :variables auto-completion-enable-sort-by-usage t
                       auto-completion-enable-help-tooltip t)
      syntax-checking
+     (shell :variables shell-default-shell 'shell
+	               shell-default-position 'right
+		       ;;shell-default-height 30
+		       shell-default-term-shell "/usr/local/bin/zsh")
 
 ;; ------------------------ Programming and markup languages ------------------------
 
@@ -295,8 +299,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
   ;;(setq-default powerline-default-separator 'arrow)
 
-  (setq-default header-line-format
-                '((which-func-mode ("" which-func-format " "))))
+  ;;(setq-default header-line-format
+  ;;              '((which-func-mode ("" which-func-format " "))))
 
   ;; improve the performance of opening large file
   (add-hook 'org-mode-hook (lambda () (spacemacs/toggle-line-numbers-off)) 'append)
